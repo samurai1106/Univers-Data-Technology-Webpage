@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="Css/Globale.css" />
     <!-- ====== Responsive Style Sheet ====== -->
     <link rel="stylesheet" href="Css/Responsive.css" />
+    <!-- ====== Slick Slider Style Sheets ====== -->
+    <link rel="stylesheet" href="Css/slick.css">
+    <link rel="stylesheet" href="Css/slick-theme.css">
     <!-- ====== Font Awesome Style Sheet ====== -->
     <link rel="stylesheet" href="Css/all.min.css">
     <!-- ====== Google fonts [Poppins] & [Aldrich] ====== -->
@@ -147,9 +150,115 @@
 
     <!-- ====== Services Section ====== -->
 
-
+    <section id="références">
+        <div class="container">
+            <h1 class="special-title">Ils Nous Font Confiance</h1>
+            <div class="slider">
+                <div>
+                    <img src="images/Références/Agence_Urbaine_Casablanca.png" alt="Agence_Urbaine_Casablanca"/>
+                </div>
+                <div>
+                    <img src="images/Références/ARMA.jpg" alt="ARMA"/>
+                </div>
+                <div>
+                    <img src="images/Références/Atlantasanad.png" alt="Atlantasanad"/>
+                </div>
+                <div>
+                    <img src="images/Références/atos.jpg" alt="Atos"/>
+                </div>
+                <div>
+                    <img src="images/Références/BNDA.jpg" alt="BNDA"/>
+                </div>
+                <div>
+                    <img src="images/Références/Canadian-North-logo.png" alt="Canadian-North"/>
+                </div>
+                <div>
+                    <img src="images/Références/EDC.jpg" alt="EDC"/>
+                </div>
+                <div>
+                    <img src="images/Références/Société_d' Aménagement_de_Zenata.jpg" alt="Société_d'Aménagement_de_Zenata"/>
+                </div>
+                <div>
+                    <img src="images/Références/SOREC.png" alt="SOREC"/>
+                </div>
+                <div>
+                    <img src="images/Références/SOS Villages d Enfants.png" alt="SOS Villages d'Enfants"/>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- ====== Main script Sheet ====== -->
     <script src="js/main.js"></script>
+
+    <!-- ====== Jquery for slick slider (CDN) ====== -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"
+        integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- ====== Slick slider sript sheet ====== -->
+    <script src="js/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".slider").slick({
+            dots: true,
+            infinite: true,
+            speed: 900,
+            slidesToShow: 7,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true,
+                },
+                },
+                {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 4,
+                },
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                },
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                },
+                },
+                {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+                },
+            ],
+            });
+        });
+    </script>
 </body>
 </html>

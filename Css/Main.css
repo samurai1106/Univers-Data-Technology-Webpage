@@ -253,4 +253,17 @@ nav .menu-bars {
 
 /* ====== Services section ====== */
 
+/* ====== Références section ====== */
 
+#références .container .slider {
+    cursor: grab;
+}
+#références .container .slider:active {
+    cursor: grabbing;
+}
+
+#références .container .slider img {
+    width: 90px;
+}
+
+/* ====== Références section ====== */
