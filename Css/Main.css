@@ -347,13 +347,17 @@ nav .menu-bars {
 }
 
 .contactez-nous .info {
-    width: 33.33%;
-    padding: 6rem 0;
+    width: 25%;
+    padding: 4rem 3rem;
     text-align: center;
 }
 
 .contactez-nous .info:not(:last-of-type) {
     border-right: 1px solid #e6e6e6;
+}
+
+.contactez-nous .info:last-of-type {
+    padding: 4rem 1rem;
 }
 
 .contactez-nous .info i {
@@ -366,6 +370,15 @@ nav .menu-bars {
     margin-bottom: 0.25rem;
     color: #474747;
     font-weight: 500;
+}
+
+.contactez-nous .info p {
+    font-size: 14px;
+}
+
+.contactez-nous .info:first-of-type p,
+.contactez-nous .info:last-of-type p {
+    font-size: 13px;
 }
 
 .contactez-nous .formula {
@@ -437,14 +450,14 @@ nav .menu-bars {
     outline: none;
     border: none;
     color: #fff;
-    background-color: #24A7DB;
+    background-color: var(--sec-blue-clr);
     border-radius: 9999px;
     transition: all var(--fast-trans-time);
     cursor: pointer;
 }
 
 .contactez-nous .formula button:hover {
-    background-color: var(--sec-blue-clr);
+    background-color: var(--third-blue-clr);
 }
 
 .contactez-nous .formula button i {
