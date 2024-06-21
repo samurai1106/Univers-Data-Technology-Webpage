@@ -33,7 +33,6 @@
     --fast-trans-time: 0.3s;
     --medium-trans-time: 0.5s;
     --main-y-padding: 6rem;
-    /* --sec-section-bg: #f9f9fb; */
     overflow-x: hidden;
 }
 
@@ -84,7 +83,7 @@ ul {
 .slick-dots li button::before {
     font-size: 10px !important;
     color: var(--sec-blue-clr) !important;
-    transition: all var(--trans-time);
+    transition: all 0.1s;
 }
 
 .slick-dots li.slick-active button:before,

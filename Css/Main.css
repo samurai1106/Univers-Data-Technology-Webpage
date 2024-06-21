@@ -140,7 +140,7 @@ nav .menu-bars {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 10px;
+    border-radius: 9999px;
     transition: all var(--fast-trans-time);
 }
 
@@ -267,3 +267,187 @@ nav .menu-bars {
 }
 
 /* ====== Références section ====== */
+
+/* ====== Partenaires section ====== */
+
+#partenaires {
+    padding-top: 0;
+}
+
+#partenaires .partenaires-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+#partenaires .special-title {
+    margin-bottom: 5rem;
+}
+
+#partenaires .partenaires-container a img {
+    max-width: 130px;
+    filter: grayscale(1);
+    transition: filter var(--fast-trans-time);
+}
+
+#partenaires .partenaires-container a img:hover {
+    filter: grayscale(0);
+}
+
+/* ====== Partenaires section ====== */
+
+/* ====== Contactez-Nous section ====== */
+
+.title-background {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+    background-image: url(../images/Contactez-nous/contact-background.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+.title-background .headings-box {
+    padding-bottom: 8rem;
+}
+
+.title-background .special-title {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.title-background .special-title::before {
+    background-color: #fff;
+}
+
+.title-background h3 {
+    width: fit-content;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 400;
+}
+
+.contactez-nous .container {
+    position: relative;
+}
+
+.contactez-nous .info-container {
+    width: 100%;
+    position: absolute;
+    top: -13rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.09);
+}
+
+.contactez-nous .info {
+    width: 33.33%;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.contactez-nous .info:not(:last-of-type) {
+    border-right: 1px solid #e6e6e6;
+}
+
+.contactez-nous .info i {
+    margin-bottom: 1.6rem;
+    color: var(--sec-blue-clr);
+    font-size: 2rem;
+}
+
+.contactez-nous .info h3 {
+    margin-bottom: 0.25rem;
+    color: #474747;
+    font-weight: 500;
+}
+
+.contactez-nous .formula {
+    padding-top: 15rem;
+}
+
+.contactez-nous .formula h1 {
+    max-width: 800px;
+    margin-bottom: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--main-black-clr);
+    text-align: center;
+    font-weight: 500;
+    text-align: center;
+}
+
+.contactez-nous .formula form {
+    margin: 0 8rem;
+}
+
+.contactez-nous .formula .inputs-container {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactez-nous .formula .inputs-container > div {
+    padding: 0.5rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactez-nous .formula .inputs-container > div:last-of-type {
+    width: 100%;
+}
+
+.contactez-nous .formula .inputs-container > div label {
+    margin-bottom: 0.5rem;
+    color: var(--main-black-clr);
+    font-weight: 300;
+    font-size: 13px;
+}
+.contactez-nous .formula .inputs-container > div input,
+.contactez-nous .formula .inputs-container > div textarea {
+    padding: 0.75rem;
+    outline: none;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    transition: all var(--fast-trans-time);
+}
+
+.contactez-nous .formula .inputs-container > div input:hover,
+.contactez-nous .formula .inputs-container > div input:focus,
+.contactez-nous .formula .inputs-container > div textarea:hover,
+.contactez-nous .formula .inputs-container > div textarea:focus {
+    border-color: rgba(15, 111, 185, 0.7);
+}
+
+.contactez-nous .formula .inputs-container > div textarea {
+    resize: none;
+}
+
+.contactez-nous .formula button {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 1.75rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #24A7DB;
+    border-radius: 9999px;
+    transition: all var(--fast-trans-time);
+    cursor: pointer;
+}
+
+.contactez-nous .formula button:hover {
+    background-color: var(--sec-blue-clr);
+}
+
+.contactez-nous .formula button i {
+    margin-right: 0.5rem;
+}
+/* ====== Contactez-Nous section ====== */
