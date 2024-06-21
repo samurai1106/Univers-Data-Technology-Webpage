@@ -1,0 +1,124 @@
+/* ====== Globale styling ====== */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--sec-blue-clr);
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--main-blue-clr);
+}
+
+:root {
+    scroll-behavior: smooth;
+    --main-blue-clr: #243866;
+    --sec-blue-clr : #0F6FB9;
+    --main-black-clr: #161616;
+    --fast-trans-time: 0.3s;
+    --medium-trans-time: 0.5s;
+    --main-y-padding: 6rem;
+    /* --sec-section-bg: #f9f9fb; */
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+section:not(:first-of-type) {
+    padding-top: var(--main-y-padding);
+    padding-bottom: var(--main-y-padding);
+}
+
+p {
+    color: #474747;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+}
+
+.special-title {
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 6rem;
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: "Aldrich";
+    color: var(--main-black-clr);
+    word-spacing: 5px;
+}
+
+.special-title::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 3px;
+    background-color: var(--sec-blue-clr);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {  
+        width: 1170px;
+    }
+}
+
+/* ====== Globale styling ====== */
+
+/* ====== Animations ====== */
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+/* ====== Animations ====== */

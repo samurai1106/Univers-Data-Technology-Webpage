@@ -1,0 +1,127 @@
+/* ====== NavBar ====== */
+
+@media (max-width: 992px) {
+    nav ul li:not(:last-of-type) {
+        margin-right: 1.2rem;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .logo {
+        height: 60px;
+    }
+    
+    nav .menu-bars {
+        display: block;
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+        color: var(--sec-blue-clr);
+        cursor: pointer;
+        transition: all var(--fast-trans-time);
+    }
+    
+    nav .menu-bars:hover {
+        color: var(--main-blue-clr);
+    }
+    
+    nav .menu-bars i {
+        font-size: 1.75rem;
+    }
+
+    nav ul {
+        height: 0px;
+        width: calc(100% - 30px);
+        overflow: hidden;
+        flex-direction: column;
+        align-items: start;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: height var(--medium-trans-time);
+    }
+
+    nav ul li {
+        width: 100%;
+        border-top: 1px solid #E4E4E4;
+    }
+
+    nav ul li a {
+        width: 100%;
+        font-size: 15px;
+        padding: 0.75rem 1.5rem;
+    }   
+
+    nav ul li a::before {
+        display: none;
+    }
+}
+
+/* ====== NavBar ====== */
+
+/* ====== Acceuil section ====== */
+
+@media (max-width: 992px) {
+    #acceuil .content .name h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 580px) {
+    #acceuil .content {
+        padding: 2rem;
+    }
+
+    #acceuil .content .name h1 {
+        font-size: 1.8rem;
+        /* text-align: center; */
+    }
+
+    #acceuil .content p {
+        font-size: 15px;
+        /* text-align: center; */
+        
+    }
+}
+
+@media (max-width: 420px) {
+    #acceuil .content {
+        padding: 1.5rem;
+    }
+
+    #acceuil .content .name h1 {
+        margin-bottom: 0.7rem;
+        font-size: 1.4rem;
+    }
+
+    #acceuil .content p {
+        font-size: 14px;
+        
+    }
+}
+@media (max-width: 350px) {
+    #acceuil .content {
+        padding: 1rem;
+    }
+
+
+    #acceuil .content .name h1 {
+        margin-bottom: 0.7rem;
+        font-size: 1.2rem;
+    }
+
+    #acceuil .content p {
+        font-size: 13px;
+        
+    }
+}
+
+/* ====== Acceuil section ====== */

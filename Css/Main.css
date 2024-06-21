@@ -1,0 +1,239 @@
+/* ====== NavBar ====== */
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 1000;
+}
+
+nav .container {
+    position: relative;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    display: block;
+    height: 70px;
+}
+
+nav .logo img {
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul.show-menu {
+    height: 263px;
+}
+
+nav ul li:not(:last-of-type) {
+    margin-right: 1.5rem;
+}
+
+nav ul li a {
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 0;
+    color: #555C55;
+    font-family: "Aldrich";
+    font-weight: 500;
+    font-size: 15px;
+    transition: all var(--fast-trans-time);
+}
+
+nav ul li a::before,
+nav ul li a.active::before {
+    content: "";
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    border-radius: 3px;
+    background-color: var(--sec-blue-clr);
+    transition: all var(--fast-trans-time);
+}
+
+nav ul li a::before {
+    width: 0;
+}
+
+nav ul li a.active::before,
+nav ul li a:hover::before {
+    width: 100%
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--sec-blue-clr);
+}
+
+nav .menu-bars {
+    display: none;
+}
+
+/* ====== NavBar ====== */
+
+/* ====== Acceuil section ====== */
+
+#acceuil {
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/Acceuil/background.png);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+#acceuil .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#acceuil .content {
+    margin-top: 4rem;
+    padding: 4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+}
+
+#acceuil .content .name h1 {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-family: "Aldrich";
+    font-size: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#acceuil .content .name h1.animate {
+    border-right: 4px solid;
+    animation: typing 0.9s steps(18, end) 0.7s 1 normal both, cursor 800ms infinite;
+}
+
+#acceuil .content p {
+    max-width: 600px;
+    color: #fff;
+}
+
+/* ====== Acceuil section ====== */
+
+/* ====== Notre histoire section ====== */
+
+#histoire .container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+#histoire img {
+    width: 450px;
+}
+
+#histoire .content {
+    margin-bottom: 4rem;
+}
+
+#histoire .content .special-title {
+    margin-bottom: 4rem;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#histoire .content p {
+    max-width: calc(100% - 70px);
+    font-size: 19px;
+    text-align: justify;
+}
+
+#histoire .content p span {
+    color: var(--main-black-clr);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* ====== Notre histoire section ====== */
+
+/* ====== Services section ====== */
+
+#services {
+    position: relative;
+    background-color: var(--main-blue-clr);
+}
+
+/* #services > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #181C31;
+    z-index: 100;
+} */
+
+#services .special-title {
+    color: #fff;
+}
+
+#services .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 45px;
+}
+
+#services .service {
+    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: all var(--fast-trans-time);
+}
+
+#services .service:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+#services .service .icone-box {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, var(--sec-blue-clr), #2382ca);
+    border-radius: 5px;
+}
+
+#services .service .icone-box i {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 13px;
+}
+
+#services .services-container .service h3 {
+    margin-bottom: 2rem;
+    color: #fff;
+    font-family: "Aldrich";
+    font-weight: 500;
+}
+
+.services-container .service p {
+    color: #c9c9c9;
+}
+
+/* ====== Services section ====== */
+
+
