@@ -124,17 +124,13 @@ nav .menu-bars {
 }
 
 #acceuil .content .name h1 {
-    width: 100%;
     color: #fff;
     font-family: "Aldrich";
     font-size: 3rem;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
-#acceuil .content .name h1.animate {
-    border-right: 4px solid;
-    animation: typing 0.9s steps(18, end) 0.7s 1 normal both, cursor 800ms infinite;
+#acceuil .content .name h1 span {
+    display: inline-block;
 }
 
 #acceuil .content p {
@@ -144,6 +140,7 @@ nav .menu-bars {
 }
 
 #acceuil .button {
+    position: relative;
     width: fit-content;
     padding: 0.75rem 1.75rem;
     color: #fff;
@@ -151,7 +148,7 @@ nav .menu-bars {
     backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 9999px;
-    transition: all var(--fast-trans-time);
+    overflow: hidden;
 }
 
 #acceuil .button:hover {
@@ -209,6 +206,71 @@ nav .menu-bars {
 
 /* ====== Notre histoire section ====== */
 
+/* ====== Notre mission section ====== */
+
+#mission {
+    background-color: var(--gray-bg);
+}
+
+#mission .container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+#mission .image .circle {
+    position: absolute;
+    bottom: 7%;
+    left: 30%;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #24A7DB;
+}
+
+#mission .image .circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%; 
+    border-radius: 50%;
+    background-color: rgba(36, 167, 219, 0.7);
+    animation: Flashing 2.5s  infinite;
+    z-index: 0;
+}
+
+#mission img {
+    display: block;
+    max-width: 430px;
+}
+
+#mission .content {
+    margin-bottom: 4rem;
+}
+
+#mission .content .special-title {
+    margin-bottom: 4rem;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#mission .content p {
+    max-width: calc(100% - 70px);
+    font-size: 19px;
+    text-align: justify;
+}
+
+#mission .content p span {
+    color: var(--main-black-clr);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* ====== Notre mission section ====== */
+
 /* ====== Services section ====== */
 
 #services {
@@ -220,7 +282,6 @@ nav .menu-bars {
     position: absolute;
     bottom: 0;
     left: 0;
-    /* z-index: 100; */
 }
 
 #services .special-title {
@@ -239,7 +300,6 @@ nav .menu-bars {
     backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    transition: all var(--fast-trans-time);
 }
 
 #services .service:hover {
@@ -257,7 +317,7 @@ nav .menu-bars {
     border-radius: 5px;
 }
 
-#services .service .icone-box i {
+#services .service .icone-box svg {
     font-size: 2rem;
     color: #fff;
 }
@@ -277,6 +337,10 @@ nav .menu-bars {
 
 /* ====== Références section ====== */
 
+#références {
+    padding-bottom: 0;
+}
+
 #références .container .slider {
     cursor: grab;
 }
@@ -291,10 +355,6 @@ nav .menu-bars {
 /* ====== Références section ====== */
 
 /* ====== Partenaires section ====== */
-
-#partenaires {
-    padding-top: 0;
-}
 
 #partenaires .partenaires-container {
     display: flex;
@@ -352,6 +412,10 @@ nav .menu-bars {
     font-weight: 400;
 }
 
+.contactez-nous {
+    background-color: var(--gray-bg);
+}
+
 .contactez-nous .container {
     position: relative;
 }
@@ -382,10 +446,10 @@ nav .menu-bars {
     padding: 4rem 1rem;
 }
 
-.contactez-nous .info i {
-    margin-bottom: 1.6rem;
+.contactez-nous .info svg {
+    margin-bottom: 1rem;
     color: var(--sec-blue-clr);
-    font-size: 2rem;
+    font-size: 3.5rem;
 }
 
 .contactez-nous .info h3 {
@@ -443,6 +507,7 @@ nav .menu-bars {
 }
 
 .contactez-nous .formula .inputs-container > div label {
+    margin-left: 1rem;
     margin-bottom: 0.5rem;
     color: var(--main-black-clr);
     font-weight: 300;
@@ -452,9 +517,13 @@ nav .menu-bars {
 .contactez-nous .formula .inputs-container > div textarea {
     padding: 0.75rem;
     outline: none;
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
+    border: none;
+    border-radius: 9999px;
     transition: all var(--fast-trans-time);
+}
+
+.contactez-nous .formula .inputs-container > div textarea {
+    border-radius: 15px;
 }
 
 .contactez-nous .formula .inputs-container > div input:hover,
@@ -469,15 +538,16 @@ nav .menu-bars {
 }
 
 .contactez-nous .formula button {
-    display: block;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     padding: 1rem 1.75rem;
     outline: none;
     border: none;
     color: #fff;
     background-color: var(--sec-blue-clr);
     border-radius: 9999px;
-    transition: all var(--fast-trans-time);
     cursor: pointer;
 }
 
@@ -485,8 +555,8 @@ nav .menu-bars {
     background-color: var(--third-blue-clr);
 }
 
-.contactez-nous .formula button i {
-    margin-right: 0.5rem;
+.contactez-nous .formula button svg {
+    font-size: 1rem;
 }
 
 /* ====== Contactez-Nous section ====== */
@@ -562,10 +632,10 @@ footer .upper-section .links-container .social-media ul li a {
     justify-content: center;
     border-radius: 7px;
     background-color: rgba(255, 255, 255, 0.1);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
-footer .upper-section .links ul li a:hover {
+footer .upper-section .links-container ul li a:hover {
     color: #fff;
 }
 
@@ -584,10 +654,13 @@ footer .upper-section .links-container .social-media ul li .linkedin:hover {
 footer .lower-section {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+footer .lower-section .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 footer .lower-section a img {

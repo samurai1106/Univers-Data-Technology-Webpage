@@ -1,4 +1,4 @@
-// ========================== Changing navbar color on scroll ==========================
+// ========================== Changing navbar opacity on scroll ==========================
 
 const navbar = document.querySelector("nav");
 
@@ -18,41 +18,6 @@ if (window.scrollY >= 100) {
 }
 });
 
-// ========================== Sections observing to change navbar links decoration ==========================
-
-const Sections = document.querySelectorAll(".main-section");
-const NavLinks = document.querySelectorAll(".navLinks");
-
-NavLinks.forEach((link) => {
-    link.addEventListener("click", (ev) => {
-        NavLinks.forEach((link) => {
-            link.classList.remove("active");
-        })
-        link.classList.add("active")
-    });
-});
-
-const SectionsOptions = {
-    threshold: 0.5,
-};
-
-const SectionsObserver = new IntersectionObserver((entries, SectionsObserver) => {
-entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-        return;
-    } else {
-        NavLinks.forEach((link) => {
-            link.classList.remove("active");
-        });
-    document.querySelector(`.${entry.target.id}`).classList.add("active");
-    }
-});
-}, SectionsOptions);
-
-Sections.forEach((Section) => {
-SectionsObserver.observe(Section);
-});
-
 // ========================== Responsive Menu ==========================
 
 const MenuBtn = document.querySelector("#menu-btn");
@@ -69,13 +34,17 @@ MenuLinks.forEach((Link) => {
     });
 });
 
-// ========================== Landing section heading animation (ISICOD) ==========================
-const animatedHeading = document.querySelector(".name h1");
+// ========================== Scroll to top button ==========================
+const scrollUpBtn = document.querySelector(".scroll-up");
 
-window.addEventListener("load", () => {
-    animatedHeading.classList.add("animate");
+window.addEventListener("scroll", () => {
+if (window.scrollY > 500) {
+    scrollUpBtn.classList.add("show-up-btn");
+} else {
+    scrollUpBtn.classList.remove("show-up-btn");
+}
 });
 
-setInterval(() => {
-    animatedHeading.classList.toggle("animate");
-}, 2800)
+scrollUpBtn.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+});

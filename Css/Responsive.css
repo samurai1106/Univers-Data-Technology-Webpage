@@ -28,8 +28,8 @@
         color: var(--main-blue-clr);
     }
     
-    nav .menu-bars i {
-        font-size: 1.75rem;
+    nav .menu-bars svg {
+        font-size: 3rem;
     }
 
     nav ul {
