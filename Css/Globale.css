@@ -132,4 +132,10 @@ ul {
     }
 }
 
+@keyframes Rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* ====== Animations ====== */

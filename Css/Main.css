@@ -8,6 +8,16 @@ nav {
     background-color: #fff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     z-index: 1000;
+    transition: all var(--medium-trans-time);
+}
+
+nav.sticky {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
+}
+
+nav.sticky:hover {
+    background-color: #fff;
 }
 
 nav .container {
@@ -158,8 +168,21 @@ nav .menu-bars {
     gap: 5rem;
 }
 
-#histoire img {
-    width: 450px;
+#histoire .image {
+    position: relative;
+}
+
+#histoire img:first-of-type {
+    display: block;
+    max-width: 430px;
+}
+
+#histoire img:last-of-type {
+    width: 65px;
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    animation: Rotation 7s linear infinite ;
 }
 
 #histoire .content {
@@ -237,7 +260,6 @@ nav .menu-bars {
 #services .service .icone-box i {
     font-size: 2rem;
     color: #fff;
-    /* margin-top: 13px; */
 }
 
 #services .services-container .service h3 {
@@ -373,16 +395,19 @@ nav .menu-bars {
 }
 
 .contactez-nous .info p {
-    font-size: 14px;
+    font-size: 15px;
 }
 
-.contactez-nous .info:first-of-type p,
-.contactez-nous .info:last-of-type p {
+.contactez-nous .info:first-of-type p {
     font-size: 13px;
 }
 
+.contactez-nous .info:last-of-type p {
+    font-size: 12px;
+}
+
 .contactez-nous .formula {
-    padding-top: 15rem;
+    padding-top: 12rem;
 }
 
 .contactez-nous .formula h1 {
@@ -463,4 +488,120 @@ nav .menu-bars {
 .contactez-nous .formula button i {
     margin-right: 0.5rem;
 }
+
 /* ====== Contactez-Nous section ====== */
+
+/* ====== Footer ====== */
+
+footer {
+    background-color: var(--main-blue-clr);
+}
+
+footer .upper-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .upper-section .content {
+    background-image: url(../images/Footer/worldmap.png);
+    background-size: 400px 200px;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+}
+
+footer .upper-section .content h3,
+footer .upper-section .links h3, 
+footer .upper-section .social-media h3 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+footer .upper-section .content p {
+    max-width: 350px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+footer .upper-section .links-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .upper-section .links-container ul li a {
+    display: inline-block;
+    color: #c9c9c9;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0.25rem 0;
+    transition: all var(--fast-trans-time);
+}
+
+footer .upper-section .links-container .social-media ul {
+    display: flex;
+}
+
+footer .upper-section .links-container .social-media ul li {
+    margin: 0 0.5rem;
+}
+
+footer .upper-section .links-container .social-media ul li:first-of-type {
+    margin-left: 0;
+}
+
+footer .upper-section .links-container .social-media ul li a {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+}
+
+footer .upper-section .links ul li a:hover {
+    color: #fff;
+}
+
+footer .upper-section .links-container .social-media ul li .facebook:hover {
+    background-color: #425f9c;
+}
+
+footer .upper-section .links-container .social-media ul li .whatsapp:hover {
+    background-color: #2eb238;
+}
+
+footer .upper-section .links-container .social-media ul li .linkedin:hover {
+    background-color: #126bc4;
+}
+
+footer .lower-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+footer .lower-section a img {
+    max-width: 90px;
+}
+
+footer .lower-section p {
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+footer .lower-section .social-media li a i {
+    color: #fff;
+}
+
+/* ====== Footer ====== */

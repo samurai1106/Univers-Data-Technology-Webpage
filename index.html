@@ -7,7 +7,7 @@
         content="UNIVERS DATA TECHNOLOGY est devenue, depuis sa création en 2020, un acteur spécialisé dans le domaine de la cybersecurity. Univers Data Technology mets à la disposition de ses clients les ressources humaines bien qualifiées et des ressources technologiques plus adaptées."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/LOGO.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Navbar/LOGO.png" />
     <title>UNIVERS-DATA-TECHNOLOGY</title>
     <!-- ====== Main Style Sheet ====== -->
     <link rel="stylesheet" href="Css/Main.css" />
@@ -35,25 +35,25 @@
     <nav>
         <div class="container">
             <a href="#" class="logo">
-                <img src="images/LOGO.png" alt="logo" />
+                <img src="images/Navbar/LOGO.png" alt="logo" />
             </a>
             <ul id="menu">
                 <li>
-                    <a class="active" href="#acceuil">Acceuil</a></li>
+                    <a class="navLinks acceuil" href="#acceuil">Acceuil</a></li>
                 <li>
-                    <a href="#histoire">Histoire</a>
+                    <a class="navLinks histoire" href="#histoire">Histoire</a>
                 </li>
                 <li>
-                    <a href="#services">Services</a>
+                    <a class="navLinks services" href="#services">Services</a>
                 </li>
                 <li>
-                    <a href="#références">Références</a>
+                    <a class="navLinks références" href="#références">Références</a>
                 </li>
                 <li>
-                    <a href="#partenaires">Partenaires</a>
+                    <a class="navLinks partenaires" href="#partenaires">Partenaires</a>
                 </li>
                 <li>
-                    <a href="#contactez-nous">Contactez-nous</a>
+                    <a class="navLinks contactez-nous" href="#contactez-nous">Contactez-nous</a>
                 </li>
             </ul>
             <div class="menu-bars" id="menu-btn">
@@ -66,7 +66,7 @@
 
     <!-- ====== Acceuil Section ====== -->
 
-    <section id="acceuil">
+    <section id="acceuil" class="main-section">
         <div class="container">
             <div class="content">
                 <div class="name">
@@ -81,12 +81,13 @@
     <!-- ====== Acceuil Section ====== -->
 
     <!-- ====== Notre Histoire Section ====== -->
-    <section id="histoire">
+    
+    <section id="histoire" class="main-section">
         <div class="container">
-                <img
-                src="images/Histoire/histoire.png"
-                alt="Image"
-                />
+            <div class="image">
+                <img src="images/Histoire/histoire.png"alt="Image"/>
+                <img src="images/Histoire/star-shape.png" alt="Star">
+            </div>
             <div class="content">
                 <h1 class="special-title">Notre Histoire</h1>
                 <p>
@@ -100,7 +101,7 @@
 
     <!-- ====== Services Section ====== -->
 
-    <section id="services">
+    <section id="services" class="main-section">
         <img src="images/Services/shape-dotted-dark.svg" alt="dots">
         <div class="container">
             <h1 class="special-title">Nos Services</h1>
@@ -152,7 +153,7 @@
     
     <!-- ====== Références Section ====== -->
     
-    <section id="références">
+    <section id="références" class="main-section">
         <div class="container">
             <h1 class="special-title">Ils Nous Font Confiance</h1>
             <div class="slider">
@@ -194,24 +195,23 @@
     
     <!-- ====== Partenaires Section ====== -->
 
-    <section id="partenaires">
+    <section id="partenaires" class="main-section">
         <div class="container">
             <h1 class="special-title">Nos Partenaires</h1>
             <div class="partenaires-container">
                 <a
-                    href="#"
+                    href="https://pecb.com/"
                     target="_blank"
                 >
                     <img src="images/Partenaires/PECB.jpg" alt="PECB" />
                 </a>
                 <a
                     href="#"
-                    target="_blank"
                 >
                     <img src="images/Partenaires/Polyline.jpg" alt="Polyline" />
                 </a>
                 <a
-                    href="#"
+                    href="https://www.sophos.com/"
                     target="_blank"
                 >
                     <img src="images/Partenaires/sophos.png" alt="sophos" />
@@ -224,7 +224,7 @@
 
     <!-- ====== Contactez-nous Section ====== -->
 
-    <section id="contactez-nous" class="title-background">
+    <section id="contactez-nous" class="main-section title-background">
         <section class="container">
             <div class="headings-box">
                 <h1 class="special-title">Contactez-Nous</h1>
@@ -247,7 +247,7 @@
                     <p>+212 5 20 49 72 20</p>
                 </div>
                 <div class="info">
-                    <i class="fa-solid fa-mobile-screen"></i>
+                    <i class="fa-solid fa-fax"></i>
                     <h3>Fax</h3>
                     <p>+212 5 22 24 67 32</p>
                 </div>
@@ -301,7 +301,65 @@
 
     <!-- ====== Contactez-nous Section ====== -->
 
-    
+    <!-- ====== Footer Section ====== -->
+
+    <footer>
+        <div class="container">
+            <div class="upper-section">
+                <div class="content">
+                    <h3>Univers Data Technology</h3>
+                    <p>Nous forgeons l'avenir de la cybersécurité avec des solutions innovantes. Protégez vos données aujourd'hui pour un monde numérique plus sûr demain.</p>
+                </div>
+                <div class="links-container">
+                    <div class="links">
+                        <h3>Liens Rapides</h3>
+                        <ul>
+                            <li>
+                                <a href="#acceuil">Acceuil</a></li>
+                            <li>
+                                <a href="#histoire">Histoire</a>
+                            </li>
+                            <li>
+                                <a href="#services">Services</a>
+                            </li>
+                            <li>
+                                <a href="#références">Références</a>
+                            </li>
+                            <li>
+                                <a href="#partenaires">Partenaires</a>
+                            </li>
+                            <li>
+                                <a href="#contactez-nous">Contactez-nous</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social-media">
+                        <h3>Réseaux Sociaux</h3>
+                        <ul>
+                            <li>
+                                <a class="facebook" href="#contactez-nous"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a class="whatsapp" href="#contactez-nous"><i class="fa-brands fa-whatsapp"></i></a>
+                            </li>
+                            <li>
+                                <a class="linkedin" href="#contactez-nous" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower-section">
+            <a href="#" class="logo">
+                <img src="images/Footer/LOGO-blanc.png" alt="logo" />
+            </a>
+            <p>© Copyrights Univers Data Technology All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- ====== Footer Section ====== -->
+
     <!-- ====== Main script Sheet ====== -->
     <script src="js/main.js"></script>
 
