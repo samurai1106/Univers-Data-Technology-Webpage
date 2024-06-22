@@ -23,6 +23,15 @@ if (window.scrollY >= 100) {
 const Sections = document.querySelectorAll(".main-section");
 const NavLinks = document.querySelectorAll(".navLinks");
 
+NavLinks.forEach((link) => {
+    link.addEventListener("click", (ev) => {
+        NavLinks.forEach((link) => {
+            link.classList.remove("active");
+        })
+        link.classList.add("active")
+    });
+});
+
 const SectionsOptions = {
     threshold: 0.5,
 };
@@ -42,15 +51,6 @@ entries.forEach((entry) => {
 
 Sections.forEach((Section) => {
 SectionsObserver.observe(Section);
-});
-
-NavLinks.forEach((link) => {
-    link.addEventListener("click", (ev) => {
-        NavLinks.forEach((link) => {
-            link.classList.remove("active");
-        })
-        link.classList.add("active")
-    });
 });
 
 // ========================== Responsive Menu ==========================

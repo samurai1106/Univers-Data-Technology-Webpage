@@ -511,9 +511,9 @@ footer .upper-section .content {
     flex-grow: 1;
 }
 
-footer .upper-section .content h3,
-footer .upper-section .links h3, 
-footer .upper-section .social-media h3 {
+footer .upper-section h3 {
+    width: fit-content;
+    position: relative;
     margin-bottom: 1rem;
     color: #fff;
     font-weight: 500;
