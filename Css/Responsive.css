@@ -6,11 +6,20 @@
     }
 
     nav ul li a {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    nav .logo {
+        height: 65px;
     }
 }
 
 @media (max-width: 768px) {
+    nav .container {
+        padding-top: 0.5rem ;
+        padding-bottom: 0.5rem ;
+    }
+
     nav .logo {
         height: 60px;
     }
@@ -25,7 +34,7 @@
     }
     
     nav .menu-bars:hover {
-        color: var(--main-blue-clr);
+        color: var(--third-blue-clr);
     }
     
     nav .menu-bars svg {
@@ -69,58 +78,25 @@
 
 /* ====== Acceuil section ====== */
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     #acceuil .content .name h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+    #acceuil .content .name h1 {
+        margin-bottom: 1rem;
         font-size: 2rem;
-    }
-}
-
-@media (max-width: 580px) {
-    #acceuil .content {
-        padding: 2rem;
-    }
-
-    #acceuil .content .name h1 {
-        font-size: 1.8rem;
-        /* text-align: center; */
-    }
-
-    #acceuil .content p {
-        font-size: 15px;
-        /* text-align: center; */
-        
-    }
-}
-
-@media (max-width: 420px) {
-    #acceuil .content {
-        padding: 1.5rem;
-    }
-
-    #acceuil .content .name h1 {
-        margin-bottom: 0.7rem;
-        font-size: 1.4rem;
     }
 
     #acceuil .content p {
         font-size: 14px;
-        
-    }
-}
-@media (max-width: 350px) {
-    #acceuil .content {
-        padding: 1rem;
+        margin-bottom: 2rem;
     }
 
-
-    #acceuil .content .name h1 {
-        margin-bottom: 0.7rem;
-        font-size: 1.2rem;
-    }
-
-    #acceuil .content p {
-        font-size: 13px;
-        
+    #acceuil .button {
+        font-size: 14px;
     }
 }
 

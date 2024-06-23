@@ -21,9 +21,10 @@ nav.sticky:hover {
 }
 
 nav .container {
+    max-height: 86px;
     position: relative;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    /* padding-top: 0.5rem;
+    padding-bottom: 0.5rem; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +45,7 @@ nav ul {
 }
 
 nav ul.show-menu {
-    height: 263px;
+    height: 310px;
 }
 
 nav ul li:not(:last-of-type) {
@@ -54,7 +55,7 @@ nav ul li:not(:last-of-type) {
 nav ul li a {
     display: inline-block;
     position: relative;
-    padding: 0.5rem 0;
+    padding: 2rem 0;
     color: #555C55;
     font-family: "Aldrich";
     font-weight: 500;
@@ -66,7 +67,7 @@ nav ul li a::before,
 nav ul li a.active::before {
     content: "";
     position: absolute;
-    bottom: -27px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     height: 2px;
@@ -99,11 +100,68 @@ nav .menu-bars {
 
 #acceuil {
     position: relative;
+    overflow: hidden;
     height: 100vh;
-    background-image: url(../images/Acceuil/background.png);
+}
+
+#acceuil .bg-slider-dots-container {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#acceuil .bg-slider-dots-container .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(36, 167, 219, 0.4);
+    cursor: pointer;
+    transition: all var(--fast-trans-time);
+}
+
+#acceuil .bg-slider-dots-container .dot:hover,
+#acceuil .bg-slider-dots-container .dot.active {
+    background-color: var(--sec-blue-clr);
+}
+
+#acceuil .backgrounds-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+#acceuil .backgrounds-container .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: top center;
-    background-attachment: fixed;
+    transform: scale(1.1);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#acceuil .backgrounds-container .background:nth-child(1) {
+    background-image: url(../images/Acceuil/background-1.png);
+}
+
+#acceuil .backgrounds-container .background:nth-child(2) {
+    background-image: url(../images/Acceuil/background-3.jpg);
+}
+
+#acceuil .backgrounds-container .background:nth-child(3) {
+    background-image: url(../images/Acceuil/background-2.jpg);
+}
+
+#acceuil .backgrounds-container .background.show {
+    opacity: 1;
+    transform: scale(1);
 }
 
 #acceuil .container {
@@ -507,6 +565,7 @@ nav .menu-bars {
 }
 
 .contactez-nous-section .formula .inputs-container > div label {
+    width: fit-content;
     margin-left: 1rem;
     margin-bottom: 0.5rem;
     color: var(--main-black-clr);
@@ -517,7 +576,7 @@ nav .menu-bars {
 .contactez-nous-section .formula .inputs-container > div textarea {
     padding: 0.75rem;
     outline: none;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 9999px;
     transition: all var(--fast-trans-time);
 }

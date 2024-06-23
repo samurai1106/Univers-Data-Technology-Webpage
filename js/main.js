@@ -1,3 +1,46 @@
+// ------------------ Page loader ------------------
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".pre-loader");
+
+    loader.classList.add("hide");
+});
+
+// ========================== Acceuil slider ==========================
+
+const backgroundImages = document.querySelectorAll(".background");
+const DotBtns = document.querySelectorAll(".dot");
+
+let ImageIndex = 0;
+
+function changeBackground() {
+    backgroundImages[ImageIndex].classList.remove("show");
+    DotBtns[ImageIndex].classList.remove("active");
+
+    ImageIndex++;
+
+    if(ImageIndex >= backgroundImages.length) {
+        ImageIndex = 0;
+    }
+
+    backgroundImages[ImageIndex].classList.add("show");
+    DotBtns[ImageIndex].classList.add("active");
+}
+
+setInterval(changeBackground, 6000);
+
+DotBtns.forEach((dot) => {
+    dot.addEventListener("click", (ev) => {
+        DotBtns.forEach(dot => {
+            dot.classList.remove("active");
+        });
+        backgroundImages.forEach(image => {
+            image.classList.remove("show");
+        });
+        dot.classList.add("active");
+        backgroundImages[ev.target.id].classList.add("show");
+    });
+});
+
 // ========================== Changing navbar opacity on scroll ==========================
 
 const navbar = document.querySelector("nav");
@@ -17,6 +60,7 @@ if (window.scrollY >= 100) {
     navbar.classList.remove("sticky");
 }
 });
+
 
 // ========================== Responsive Menu ==========================
 
