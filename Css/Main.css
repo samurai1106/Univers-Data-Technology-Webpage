@@ -191,6 +191,29 @@ nav .menu-bars {
     display: inline-block;
 }
 
+#acceuil .content .name h1 span.animate {
+    animation: glitch 1s linear infinite;
+}
+
+#acceuil .content .name h1 span.animate:before,
+#acceuil .content .name h1 span.animate:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+#acceuil .content .name h1 span.animate:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+#acceuil .content .name h1 span.animate:after {
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
 #acceuil .content p {
     margin-bottom: 3rem;
     max-width: 600px;

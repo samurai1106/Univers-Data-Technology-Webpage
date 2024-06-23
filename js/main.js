@@ -44,6 +44,26 @@ DotBtns.forEach((dot) => {
     });
 });
 
+// ========================== Words glitch effect ==========================
+
+const TitleWords = document.querySelectorAll("#acceuil .content .name h1 span");
+const HomeParagraph = document.querySelectorAll("#acceuil .content p")
+
+function WordGlitch() {
+    TitleWords.forEach(Word => {
+        Word.classList.add("animate");
+        setTimeout(() => {
+            Word.classList.remove("animate");
+        },500);
+    });
+}
+
+window.addEventListener("load", () => {
+    setInterval(WordGlitch, 6000);
+});
+
+
+
 // ========================== Changing navbar opacity on scroll ==========================
 
 const navbar = document.querySelector("nav");
@@ -80,6 +100,7 @@ MenuLinks.forEach((Link) => {
         Menu.classList.remove("show-menu");
     });
 });
+
 
 // ========================== Scroll to top button ==========================
 const scrollUpBtn = document.querySelector(".scroll-up");
