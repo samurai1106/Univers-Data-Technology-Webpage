@@ -4,7 +4,7 @@ const Sections = document.querySelectorAll(".main-section");
 const NavLinks = document.querySelectorAll(".navLinks");
 
 const SectionsOptions = {
-    threshold: 1,
+    threshold: 0.5,
 };
 
 const SectionsObserver = new IntersectionObserver((entries, SectionsObserver) => {
