@@ -26,7 +26,10 @@ function changeBackground() {
     DotBtns[ImageIndex].classList.add("active");
 }
 
-setInterval(changeBackground, 6000);
+window.addEventListener("load", () => {
+    setInterval(changeBackground, 6000);
+});
+
 
 DotBtns.forEach((dot) => {
     dot.addEventListener("click", (ev) => {
