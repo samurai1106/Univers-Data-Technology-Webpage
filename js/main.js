@@ -84,6 +84,14 @@ MenuLinks.forEach((Link) => {
 // ========================== Scroll to top button ==========================
 const scrollUpBtn = document.querySelector(".scroll-up");
 
+window.addEventListener("load", () => {
+    if (window.scrollY > 500) {
+        scrollUpBtn.classList.add("show-up-btn");
+    } else {
+        scrollUpBtn.classList.remove("show-up-btn");
+    }
+});
+
 window.addEventListener("scroll", () => {
 if (window.scrollY > 500) {
     scrollUpBtn.classList.add("show-up-btn");
