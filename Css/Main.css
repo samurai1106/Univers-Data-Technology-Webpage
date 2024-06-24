@@ -661,7 +661,6 @@ footer .upper-section {
 footer .upper-section .content {
     background-image: url(../images/Services/electronic-shape-left.png);
     background-size: cover;
-    background-repeat: no-repeat;
     flex-grow: 1;
 }
 

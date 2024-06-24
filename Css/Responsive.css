@@ -337,13 +337,15 @@
 
 @media (max-width: 768px)  {
     footer .upper-section {
+        background-image: url(../images/Services/electronic-shape-right.png);
+        background-size: cover;
+        background-position: right;
         flex-direction: column;
         gap: 30px;
     }
 
-    footer .lower-section .container {
-        flex-direction: column;
-        gap: 8px;
+    footer .upper-section .content {
+        background-image: none;
     }
 
     footer .upper-section .links-container {
@@ -352,6 +354,11 @@
 
     footer .upper-section .links-container .links {
         display: none;
+    }
+
+    footer .lower-section .container {
+        flex-direction: column;
+        gap: 8px;
     }
 
     footer .lower-section p {
