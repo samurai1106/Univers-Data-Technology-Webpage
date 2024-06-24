@@ -79,6 +79,11 @@
 /* ====== Acceuil section ====== */
 
 @media (max-width: 768px) {
+    #acceuil .backgrounds-container .background:nth-child(2),
+    #acceuil .backgrounds-container .background:nth-child(3) {
+        background-position: right;
+    }
+
     #acceuil .content .name h1 {
         font-size: 2.5rem;
     }
@@ -100,4 +105,260 @@
     }
 }
 
+@media (max-width: 350px) {
+    #acceuil .backgrounds-container .background:nth-child(2), 
+    #acceuil .backgrounds-container .background:nth-child(3){ 
+        background-position: -1720px;
+    }
+}
+
 /* ====== Acceuil section ====== */
+
+/* ====== Notre histoire section ====== */ 
+
+@media (max-width: 992px) {
+    #histoire .container {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    #histoire img:first-of-type {
+        max-width: 100%;
+    }
+
+    #histoire .content .special-title {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #histoire .content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 430px) {
+    #histoire .content .special-title {
+        margin-bottom: 2.5rem;
+    }
+
+    #histoire .content p {
+        font-size: 17px;
+        text-align: start;
+    }
+}
+
+@media (max-width: 350px) {
+    #histoire .content p {
+        font-size: 15px;
+    }
+}
+
+/* ====== Notre histoire section ====== */ 
+
+/* ====== Notre mission section ====== */
+
+@media (max-width: 992px) {
+    #mission .container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #mission .image img {
+        max-width: 100%;
+    }
+
+    #mission .content .special-title {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #mission .content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 430px) {
+    #mission .content .special-title {
+        margin-bottom: 2.5rem;
+    }
+
+    #mission .content p {
+        font-size: 17px;
+        text-align: start;
+    }
+}
+
+@media (max-width: 350px) {
+    #mission .content p {
+        font-size: 15px;
+    }
+}
+
+/* ====== Notre mission section ====== */
+
+/* ====== Services section ====== */
+
+@media (max-width: 430px) {
+    #services .services-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* ====== Services section ====== */
+
+/* ====== Partenaires section ====== */
+
+@media (max-width: 590px) {
+    #partenaires .partenaires-container {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 430px) {
+    #partenaires .partenaires-container {
+        gap: 30px;
+    }
+}
+
+/* ====== Partenaires section ====== */
+
+/* ====== Contactez-Nous section ====== */
+
+@media (max-width: 1200px) {
+    .contactez-nous-section .info {
+        width: 50%;
+    }
+
+    .contactez-nous-section .info:nth-child(1),
+    .contactez-nous-section .info:nth-child(2) {
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .contactez-nous-section .info:nth-child(2) {
+        border-right: none;
+    }
+
+    .contactez-nous-section .formula {
+        padding-top: 27rem;
+    }
+
+    .contactez-nous-section .formula form {
+        margin: 0 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .contactez-nous-section .formula form {
+        margin: 0;
+    }
+
+    .contactez-nous-section .formula .inputs-container > div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-background {
+        background-position: right;
+    }
+
+    .contactez-nous-section .info-container {
+        width: fit-content;
+        margin: 0 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contactez-nous-section .info-container {
+        position: static;
+        margin: 0;
+        gap: 30px;
+        box-shadow: none;
+    }
+
+    .contactez-nous-section .info {
+        width: 100%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 5px;
+    }
+
+    .contactez-nous-section .info:not(:last-of-type) {
+        border-bottom: 2px solid #e6e6e6;
+    }
+
+    .contactez-nous-section .info:nth-child(1),
+    .contactez-nous-section .info:nth-child(3) {
+        border-right: none;
+    }
+
+    .contactez-nous-section .formula {
+        margin-top: 5rem;
+        padding-top: 0;
+    }
+
+    .contactez-nous-section .formula h1 {
+        font-size: 1.3rem;
+    }
+
+    .contactez-nous-section .info:first-of-type p,
+    .contactez-nous-section .info:last-of-type p  {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .title-background .special-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .title-background .special-title {
+        font-size: 2.2rem;
+    }
+
+    .contactez-nous-section .formula h1 {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .title-background { 
+        background-position: -1720px;
+    }
+}
+
+/* ====== Contactez-Nous section ====== */
+
+/* ====== Footer ====== */
+
+@media (max-width: 768px)  {
+    footer .upper-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .lower-section .container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    footer .upper-section .links-container {
+        justify-content: start;
+    }
+
+    footer .upper-section .links-container .links {
+        display: none;
+    }
+
+    footer .lower-section p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+}
+
+/* ====== Footer ====== */

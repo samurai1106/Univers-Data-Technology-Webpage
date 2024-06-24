@@ -191,29 +191,6 @@ nav .menu-bars {
     display: inline-block;
 }
 
-#acceuil .content .name h1 span.animate {
-    animation: glitch 1s linear infinite;
-}
-
-#acceuil .content .name h1 span.animate:before,
-#acceuil .content .name h1 span.animate:after {
-    content: attr(title);
-    position: absolute;
-    left: 0;
-}
-
-#acceuil .content .name h1 span.animate:before {
-    animation: glitchTop 1s linear infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-#acceuil .content .name h1 span.animate:after {
-    animation: glitchBotom 1.5s linear infinite;
-    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
 #acceuil .content p {
     margin-bottom: 3rem;
     max-width: 600px;
@@ -251,12 +228,11 @@ nav .menu-bars {
 }
 
 #histoire img:first-of-type {
-    display: block;
-    max-width: 430px;
+    width: 430px;
 }
 
 #histoire img:last-of-type {
-    width: 65px;
+    width: 16%;
     position: absolute;
     top: 30%;
     left: 1%;
@@ -281,7 +257,6 @@ nav .menu-bars {
 
 #histoire .content p span {
     color: var(--main-black-clr);
-    font-size: 19px;
     font-weight: bold;
 }
 
@@ -303,8 +278,8 @@ nav .menu-bars {
     position: absolute;
     bottom: 7%;
     left: 30%;
-    width: 130px;
-    height: 130px;
+    width: 30%;
+    height: 26%;
     border-radius: 50%;
     background-color: #24A7DB;
 }
@@ -322,9 +297,8 @@ nav .menu-bars {
     animation: Flash-1 2.5s  infinite;
 }
 
-#mission img {
-    display: block;
-    max-width: 430px;
+#mission .image img {
+    width: 430px;
 }
 
 #mission .content {
@@ -343,12 +317,6 @@ nav .menu-bars {
     text-align: justify;
 }
 
-#mission .content p span {
-    color: var(--main-black-clr);
-    font-size: 19px;
-    font-weight: bold;
-}
-
 /* ====== Notre mission section ====== */
 
 /* ====== Services section ====== */
@@ -359,9 +327,10 @@ nav .menu-bars {
 }
 
 #services > img {
+    width: 900px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
 }
 
 #services .special-title {
@@ -375,29 +344,43 @@ nav .menu-bars {
 }
 
 #services .service {
+    position: relative;
     padding: 2.5rem;
     background-color: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    overflow: hidden;
 }
 
 #services .service:hover {
-    background-color: rgba(255, 255, 255, 0.09);
+    border-color: transparent;
 }
 
 #services .service .icone-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
     width: 60px;
     height: 60px;
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-image: linear-gradient(to top, var(--sec-blue-clr), #2382ca);
-    border-radius: 5px;
+    border-radius: 50%;
+    transition: all 0.9s;
+    z-index: -5;
 }
 
-#services .service .icone-box svg {
+#services .service:hover .icone-box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    height: 800px;
+}
+
+#services .service svg {
+    margin-top: 0.9rem;
+    margin-left: 0.9rem;
+    margin-bottom: 3rem;
     font-size: 2rem;
     color: #fff;
 }
@@ -411,6 +394,11 @@ nav .menu-bars {
 
 .services-container .service p {
     color: #c9c9c9;
+    transition: all var(--medium-trans-time);
+}
+
+#services .service:hover p {
+    color: #fff;
 }
 
 /* ====== Services section ====== */
@@ -481,7 +469,7 @@ nav .menu-bars {
     margin-bottom: 4rem;
 }
 
-.title-background .special-title::before {
+.title-background .special-title .line {
     background-color: #fff;
 }
 
@@ -501,21 +489,26 @@ nav .menu-bars {
 }
 
 .contactez-nous-section .info-container {
-    width: 100%;
+    max-width: 100%;
     position: absolute;
     top: -13rem;
     left: 0;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    background-color: #fff;
-    box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.09);
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .contactez-nous-section .info {
     width: 25%;
     padding: 4rem 3rem;
+    background-color: #fff;
     text-align: center;
+    transition: all 0.2;
+}
+
+.contactez-nous-section .info:hover {
+    background-color: var(--third-blue-clr);
 }
 
 .contactez-nous-section .info:not(:last-of-type) {
@@ -530,16 +523,25 @@ nav .menu-bars {
     margin-bottom: 1rem;
     color: var(--sec-blue-clr);
     font-size: 3.5rem;
+    transition: all 0.2;
 }
 
 .contactez-nous-section .info h3 {
     margin-bottom: 0.25rem;
     color: #474747;
     font-weight: 500;
+    transition: all 0.2;
 }
 
 .contactez-nous-section .info p {
     font-size: 15px;
+    transition: all 0.2;
+}
+
+.contactez-nous-section .info:hover svg,
+.contactez-nous-section .info:hover h3,
+.contactez-nous-section .info:hover p {
+    color: #fff;
 }
 
 .contactez-nous-section .info:first-of-type p {
@@ -653,11 +655,12 @@ footer .upper-section {
     padding-bottom: 4rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 footer .upper-section .content {
-    background-image: url(../images/Footer/worldmap.png);
-    background-size: 400px 200px;
+    background-image: url(../images/Services/electronic-shape-left.png);
+    background-size: cover;
     background-repeat: no-repeat;
     flex-grow: 1;
 }

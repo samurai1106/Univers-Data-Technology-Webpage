@@ -25,6 +25,7 @@ SectionsObserver.observe(Section);
 });
 
 // ========================== Fade effect to element while scrolling ==========================
+
 window.addEventListener("load", () => {
     // ========================== Fade top ==========================
 const fadersTop = document.querySelectorAll(".fade-top");
@@ -41,7 +42,7 @@ const fadersTopObserver = new IntersectionObserver(
         } else {
             entry.target.classList.add("appear-top");
             setTimeout(() => {
-                entry.target.style.cssText = `transition-delay = 0`
+                entry.target.style.cssText = `transition-delay = 0`;
             }, 500);
         }
     });
@@ -68,7 +69,7 @@ const fadersDownObserver = new IntersectionObserver(
         } else {
             entry.target.classList.add("appear-down");
             setTimeout(() => {
-                entry.target.style.cssText = `transition-delay = 0`
+                entry.target.style.cssText = `transition-delay = 0`;
             }, 500);
         }
     });
@@ -95,7 +96,7 @@ const fadersLeftObserver = new IntersectionObserver(
         } else {
             entry.target.classList.add("appear-left");
             setTimeout(() => {
-                entry.target.style.cssText = `transition-delay = 0`
+                entry.target.style.cssText = `transition-delay = 0`;
             }, 500);
         }
     });
@@ -122,7 +123,7 @@ const fadersRightObserver = new IntersectionObserver(
         } else {
             entry.target.classList.add("appear-right");
             setTimeout(() => {
-                entry.target.style.cssText = `transition-delay = 0`
+                entry.target.style.cssText = `transition-delay = 0`;
             }, 500);
         }
     });
@@ -134,3 +135,33 @@ fadersRight.forEach((fader) => {
     fadersRightObserver.observe(fader);
 });
 });
+
+// ========================== Glitched words observing ==========================
+
+window.addEventListener ("load", () => {
+    const GlitchWords = document.querySelectorAll(".glitch");
+    
+    const GlitchWordsOptions = {
+        threshold: 1,
+    };
+        
+    const GlitchWordsObserver = new IntersectionObserver(
+        (entries, GlitchWordsObserver) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add("animate");
+                setTimeout(() => {
+                    entry.target.classList.remove("animate");
+                }, 1000);
+            }
+        });
+        },
+        GlitchWordsOptions
+    );
+    
+    GlitchWords.forEach((word) => {
+        GlitchWordsObserver.observe(word);
+    });
+})

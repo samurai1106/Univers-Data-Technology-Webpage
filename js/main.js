@@ -5,12 +5,23 @@ window.addEventListener("load", () => {
     loader.classList.add("hide");
 });
 
-// ========================== Acceuil slider ==========================
+// ========================== Words glitch effect and Acceuil slider ==========================
 
+const GlitchWords = document.querySelectorAll(".glitch");
 const backgroundImages = document.querySelectorAll(".background");
 const DotBtns = document.querySelectorAll(".dot");
 
 let ImageIndex = 0;
+let Timeout = 6000;
+
+function WordGlitch() {
+    GlitchWords.forEach(word => {
+        word.classList.add("animate");
+        setTimeout(() => {
+            word.classList.remove("animate");
+        },800);
+    });
+}
 
 function changeBackground() {
     backgroundImages[ImageIndex].classList.remove("show");
@@ -24,44 +35,30 @@ function changeBackground() {
 
     backgroundImages[ImageIndex].classList.add("show");
     DotBtns[ImageIndex].classList.add("active");
+
+    WordGlitch();
 }
 
 window.addEventListener("load", () => {
-    setInterval(changeBackground, 6000);
-});
-
-
-DotBtns.forEach((dot) => {
-    dot.addEventListener("click", (ev) => {
-        DotBtns.forEach(dot => {
-            dot.classList.remove("active");
+    setInterval(changeBackground, Timeout);
+    
+    DotBtns.forEach((dot) => {
+        dot.addEventListener("click", (ev) => {
+            ImageIndex = ev.target.id;
+            DotBtns.forEach(dot => {
+                dot.classList.remove("active");
+            });
+            backgroundImages.forEach(image => {
+                image.classList.remove("show");
+            });
+            
+            dot.classList.add("active");
+            backgroundImages[ImageIndex].classList.add("show");
+            
+            WordGlitch();
         });
-        backgroundImages.forEach(image => {
-            image.classList.remove("show");
-        });
-        dot.classList.add("active");
-        backgroundImages[ev.target.id].classList.add("show");
     });
 });
-
-// ========================== Words glitch effect ==========================
-
-const TitleWords = document.querySelectorAll("#acceuil .content .name h1 span");
-const HomeParagraph = document.querySelectorAll("#acceuil .content p")
-
-function WordGlitch() {
-    TitleWords.forEach(Word => {
-        Word.classList.add("animate");
-        setTimeout(() => {
-            Word.classList.remove("animate");
-        },500);
-    });
-}
-
-window.addEventListener("load", () => {
-    setInterval(WordGlitch, 6000);
-});
-
 
 
 // ========================== Changing navbar opacity on scroll ==========================

@@ -84,28 +84,60 @@ ul {
     --c:no-repeat linear-gradient(var(--sec-blue-clr) 0 0);
     background: var(--c),var(--c),#fff;
     background-size: 60% 100%;
-    animation: l16 3s infinite;
+    animation: loading 3s infinite;
 }
-@keyframes l16 {
-    0%   {background-position:-150% 0,-150% 0}
-    66%  {background-position: 250% 0,-150% 0}
-    100% {background-position: 250% 0, 250% 0}
+
+.glitch.animate {
+    animation: glitch 1s linear;
+}
+
+.glitch.animate:before,
+.glitch.animate:after {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch.animate:before {
+    animation: glitchTop 1s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch.animate:after {
+    animation: glitchBotom 1.5s linear;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
 .special-title {
+    position: relative;
     width: fit-content;
     margin: 0 auto;
-    position: relative;
     margin-bottom: 6rem;
     font-size: 2.3rem;
     font-weight: bold;
     font-family: "Aldrich";
+    text-align: center;
     color: var(--main-black-clr);
     word-spacing: 5px;
 }
 
-.special-title::before {
-    content: "";
+@media (max-width: 430px) {
+    .special-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .special-title {
+        font-size: 1.8rem;
+    }
+}
+
+
+.special-title .line {
     position: absolute;
     bottom: -15px;
     left: 50%;
@@ -161,37 +193,36 @@ ul {
 .fade-top {
     transform: translateY(20px);
     opacity: 0;
-    transition: all 0.9s;
 }
 
 .fade-down {
     transform: translateY(-20px);
     opacity: 0;
-    transition: all 0.9s;
 }
 
 .fade-top.appear-top,
 .fade-down.appear-down {
     transform: translateY(0);
     opacity: 1;
+    transition: all 0.9s;
+
 }
 
 .fade-left {
     transform: translateX(-80px);
     opacity: 0;
-    transition: all 0.9s;
 }
 
 .fade-right {
     transform: translateX(80px);
     opacity: 0;
-    transition: all 0.9s;
 }
 
 .fade-left.appear-left,
 .fade-right.appear-right {
     transform: translateX(0);
     opacity: 1;
+    transition: all 0.9s;
 }
 
 .slick-dots li button::before {
@@ -232,6 +263,12 @@ ul {
 /* ====== Globale styling ====== */
 
 /* ====== Animations ====== */
+
+@keyframes loading {
+    0%   {background-position:-150% 0,-150% 0}
+    66%  {background-position: 250% 0,-150% 0}
+    100% {background-position: 250% 0, 250% 0}
+}
 
 @keyframes Flash-1 {
     20% {
