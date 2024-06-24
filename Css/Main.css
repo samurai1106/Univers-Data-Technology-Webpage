@@ -451,6 +451,7 @@ nav .menu-bars {
 /* ====== Contactez-Nous section ====== */
 
 .title-background {
+    position: relative;
     padding-top: 8rem !important;
     padding-bottom: 8rem !important;
     background-image: url(../images/Contactez-nous/contact-background.jpg);
@@ -476,6 +477,7 @@ nav .menu-bars {
 .title-background h3 {
     width: fit-content;
     margin: 0 auto;
+    text-align: center;
     color: #fff;
     font-weight: 400;
 }
