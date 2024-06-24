@@ -96,15 +96,15 @@
     }
 
     #acceuil .backgrounds-container .background:nth-child(1):before {
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
     #acceuil .backgrounds-container .background:nth-child(2):before {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.4);
     }
 
     #acceuil .backgrounds-container .background:nth-child(3):before {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
     #acceuil .content .name h1 {
@@ -338,6 +338,10 @@
 }
 
 @media (max-width: 430px) {
+    .title-background {
+        background-attachment:  unset;
+    }
+
     .title-background .special-title {
         font-size: 2.2rem;
     }
