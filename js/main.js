@@ -1,8 +1,30 @@
-// ------------------ Page loader ------------------
+// ========================== Page loader ==========================
+
 window.addEventListener("load", () => {
     const loader = document.querySelector(".pre-loader");
 
     loader.classList.add("hide");
+});
+
+// ========================== Active nav links on scroll ==========================
+
+const MainSections = document.querySelectorAll(".main-section");
+const NavLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", () => {
+    MainSections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 100;
+        let height = section.offsetHeight;
+        let id = section.getAttribute("id");
+
+        if(top >= offset && top < offset + height) {
+            NavLinks.forEach(nav => {
+                nav.classList.remove("active");
+                document.querySelector("nav ul li a[href*=" + id +"]").classList.add("active");
+            });
+        }
+    });
 });
 
 // ========================== Words glitch effect and Acceuil slider ==========================
@@ -60,28 +82,6 @@ window.addEventListener("load", () => {
     });
 });
 
-
-// ========================== Changing navbar opacity on scroll ==========================
-
-const navbar = document.querySelector("nav");
-
-window.addEventListener("load", () => {
-if (window.scrollY >= 100) {
-    navbar.classList.add("sticky");
-} else {
-    navbar.classList.remove("sticky");
-}
-});
-
-window.addEventListener("scroll", () => { 
-if (window.scrollY >= 100) {
-    navbar.classList.add("sticky");
-} else {
-    navbar.classList.remove("sticky");
-}
-});
-
-
 // ========================== Responsive Menu ==========================
 
 const MenuBtn = document.querySelector("#menu-btn");
@@ -98,17 +98,8 @@ MenuLinks.forEach((Link) => {
     });
 });
 
-
 // ========================== Scroll to top button ==========================
 const scrollUpBtn = document.querySelector(".scroll-up");
-
-window.addEventListener("load", () => {
-    if (window.scrollY > 500) {
-        scrollUpBtn.classList.add("show-up-btn");
-    } else {
-        scrollUpBtn.classList.remove("show-up-btn");
-    }
-});
 
 window.addEventListener("scroll", () => {
 if (window.scrollY > 500) {

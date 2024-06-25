@@ -51,16 +51,18 @@
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #fff;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color: var(--main-blue-clr);
+        border-radius: 5px;
+        box-shadow: rgba(36, 56, 102, 0.7) 0px 7px 29px 0px;
         transition: height var(--medium-trans-time);
     }
 
     nav ul li {
         width: 100%;
-        border-top: 1px solid #E4E4E4;
+    }
+    
+    nav ul li:not(:first-of-type) {
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     nav ul li a {
@@ -100,11 +102,11 @@
     }
 
     #acceuil .backgrounds-container .background:nth-child(2):before {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.6);
     }
 
     #acceuil .backgrounds-container .background:nth-child(3):before {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.4);
     }
 
     #acceuil .content .name h1 {
@@ -328,6 +330,12 @@
     .contactez-nous-section .info:first-of-type p,
     .contactez-nous-section .info:last-of-type p  {
         font-size: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .contactez-nous-section .info:last-of-type p  {
+        font-size: 11px;
     }
 }
 

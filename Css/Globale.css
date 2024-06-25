@@ -87,30 +87,6 @@ ul {
     animation: loading 3s infinite;
 }
 
-.glitch.animate {
-    animation: glitch 1s linear;
-}
-
-.glitch.animate:before,
-.glitch.animate:after {
-    content: attr(title);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.glitch.animate:before {
-    animation: glitchTop 1s linear;
-    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-.glitch.animate:after {
-    animation: glitchBotom 1.5s linear;
-    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
 .special-title {
     position: relative;
     width: fit-content;
@@ -190,6 +166,30 @@ ul {
     opacity: 1;
 }
 
+.glitch.animate {
+    animation: glitch 1s linear;
+}
+
+.glitch.animate:before,
+.glitch.animate:after {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch.animate:before {
+    animation: glitchTop 1s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.glitch.animate:after {
+    animation: glitchBotom 1.5s linear;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
 .fade-top {
     transform: translateY(20px);
     opacity: 0;
@@ -204,8 +204,7 @@ ul {
 .fade-down.appear-down {
     transform: translateY(0);
     opacity: 1;
-    transition: all 0.9s;
-
+    transition: all 1s;
 }
 
 .fade-left {
@@ -222,7 +221,7 @@ ul {
 .fade-right.appear-right {
     transform: translateX(0);
     opacity: 1;
-    transition: all 0.9s;
+    transition: all 1s;
 }
 
 .slick-dots li button::before {
@@ -268,6 +267,13 @@ ul {
     0%   {background-position:-150% 0,-150% 0}
     66%  {background-position: 250% 0,-150% 0}
     100% {background-position: 250% 0, 250% 0}
+}
+
+@keyframes Title-Word-Animation {
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @keyframes Flash-1 {

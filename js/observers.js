@@ -1,29 +1,3 @@
-// ========================== Sections observing to change navbar links decoration ==========================
-
-const Sections = document.querySelectorAll(".main-section");
-const NavLinks = document.querySelectorAll(".navLinks");
-
-const SectionsOptions = {
-    threshold: 0.5,
-};
-
-const SectionsObserver = new IntersectionObserver((entries, SectionsObserver) => {
-entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-        return;
-    } else {
-        NavLinks.forEach((link) => {
-            link.classList.remove("active");
-        });
-    document.querySelector(`.${entry.target.id}`).classList.add("active");
-    }
-});
-}, SectionsOptions);
-
-Sections.forEach((Section) => {
-SectionsObserver.observe(Section);
-});
-
 // ========================== Fade effect to element while scrolling ==========================
 
 window.addEventListener("load", () => {
@@ -31,7 +5,7 @@ window.addEventListener("load", () => {
 const fadersTop = document.querySelectorAll(".fade-top");
 
 const fadersTopOptions = {
-    threshold: 0.3,
+    threshold: 0.5,
 };
 
 const fadersTopObserver = new IntersectionObserver(
@@ -58,7 +32,7 @@ fadersTop.forEach((fader) => {
 const fadersDown = document.querySelectorAll(".fade-down");
 
 const fadersDownOptions = {
-    threshold: 0.3,
+    threshold: 0.5,
 };
     
 const fadersDownObserver = new IntersectionObserver(
