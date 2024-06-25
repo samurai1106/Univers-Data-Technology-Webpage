@@ -2,6 +2,7 @@
 
 nav {
     width: 100%;
+    padding-top: 1rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -48,28 +49,6 @@ nav ul li a {
     font-weight: 500;
     font-size: 15px;
     transition: all var(--fast-trans-time);
-}
-
-nav ul li a::before,
-nav ul li a.active::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 2px;
-    border-radius: 3px;
-    background-color: var(--sec-blue-clr);
-    transition: all var(--fast-trans-time);
-}
-
-nav ul li a::before {
-    width: 0;
-}
-
-nav ul li a.active::before,
-nav ul li a:hover::before {
-    width: 100%
 }
 
 nav ul li a:hover,

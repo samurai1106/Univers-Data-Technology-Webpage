@@ -70,10 +70,6 @@
         font-size: 15px;
         padding: 0.75rem 1.5rem;
     }   
-
-    nav ul li a::before {
-        display: none;
-    }
 }
 
 /* ====== NavBar ====== */
